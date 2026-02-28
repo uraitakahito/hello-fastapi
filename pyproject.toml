@@ -7,3 +7,10 @@ requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.133.1",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.2",
+]
+
+# To follow the Single Responsibility Principle, Ruff settings should be written in .ruff.toml
