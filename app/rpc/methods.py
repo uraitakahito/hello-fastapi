@@ -1,4 +1,4 @@
-from jsonrpc import dispatcher  # type: ignore[import-untyped]
+from jsonrpc import dispatcher
 
 
 @dispatcher.add_method
