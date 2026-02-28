@@ -55,6 +55,8 @@
     },
     "python.analysis.autoFormatStrings": true,
     "python.analysis.autoSearchPaths": true,
+    // https://microsoft.github.io/pyright/#/configuration?id=stubpath
+    "python.analysis.stubPath": "typings",
     "python.analysis.completeFunctionParens": true,
     "python.analysis.diagnosticMode": "openFilesOnly",
     "python.analysis.displayEnglishDiagnostics": true,

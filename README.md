@@ -1,7 +1,34 @@
-## Starting the development server
+## Starting the development servers
+
+### Hello World server (port 8000)
 
 ```console
-% uv run fastapi dev
+% uv run uvicorn app.hello.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+### JSON-RPC server (port 8001)
+
+```console
+% uv run uvicorn app.rpc.main:app --reload --host 0.0.0.0 --port 8001
+```
+
+## Testing with curl
+
+### Hello World server
+
+```console
+% curl http://localhost:8000/
+{"Hello":"World"}
+```
+
+### JSON-RPC server
+
+```console
+% curl -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "subtract", "params": {"minuend": 42, "subtrahend": 23}, "id": 1}' \
+  http://localhost:8001/api
+{"jsonrpc": "2.0", "result": 19.0, "id": 1}
 ```
 
 ## Running the tests
