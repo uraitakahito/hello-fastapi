@@ -1,3 +1,11 @@
+## Starting the development server
+
+```console
+% uv run fastapi dev
+```
+
+## Starting the development server with Docker
+
 If you develop inside a Docker container, run the following commands and read the documentation at the top of the Dockerfile to set up your development environment.
 
 ```console
